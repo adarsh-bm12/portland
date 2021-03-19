@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <meta name="version" content="2019.0.8"/>
+  <link rel="StyleSheet" href="../template/styles/topic.min.css" type="text/css"/>
+  <link rel="StyleSheet" data-skin="true" type="text/css" href="../template/Portorange/layout.css"/>
+  <link rel="StyleSheet" data-skin="true" href="../template/Portorange/userstyles.css" type="text/css"/>
+  <title>Deploying PortaSwitch® across multiple sites</title>
+  
+
+  <meta charset="UTF-8"/>
+  <title>Deploying PortaSwitch® across multiple sites</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../assets/css/new_css.css"/>
+  <link rel="stylesheet" href="../assets/css/PortaSwitch_Concepts_MR89-01-AD.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <meta name="topic-status" content="Draft"/>
+</head>
+
+<body class="rh-BODY-wrapper">
+  <div class="cookie-widget-holder" id="cookie-status-widget-holder"></div>
+  <div class="RH-LAYOUT-HEADER-container  ">
+    <div class="RH-LAYOUT-HEADER-logo-box  ">
+      <div class="logo-holder" id="logo-holder"></div>
+      <div class="topic-title-holder" id="topic-title-holder"></div>
+    </div>
+    <div class="search-placeholder-class" id="search-with-help"></div>
+  </div>
+  <div class="RH-LAYOUT-BODY-container">
+    <div class="RH-LAYOUT-SEARCHRESULTS" id="rh-searchresults"></div>
+    <div class="RH-LAYOUT-LEFTPANEL-container" id="rh-leftpanel"></div>
+    <div class="rh-layout-BODY-main" id="rh-layout-main">
+      <div class="RH-LAYOUT-TOOLBAR-toolbar-box" id="rh-toolbar"></div>
+      <div class="rh-layout-BODY-body">
+        <div class="RH-LAYOUT-CENTERPANEL-container">
+          <div class="rh-selectdetails" id="rh-selectdetails"></div>
+          <div class="RH-LAYOUT-CENTERPANEL-topic-box" id="rh-topic">
+  <div>
+    <h2 class="Heading2"><a id="_Toc59709046"></a><a id="_Hlk515959615"></a>Deploying PortaSwitch® across multiple sites</h2>
+    <p>To meet customers’ expectations regarding the quality of communication services the service provider needs to introduce an extra degree of reliability within the network and its applications, so that the service is not interrupted – even if some network
+      components are not functioning. How can this demand be addressed?</p>
+    <p>The per-server redundancy (when there are two physical servers and each runs a copy of an application, such as PortaSIP®) addresses the situation when a single server fails (e.g. hardware fault). But there is another class of “catastrophic” events
+      that can render all servers installed in the same location (rack, hosting center, etc.) unavailable. Such events include natural disasters, power outages at the collocation provider, network routing errors, etc. The only way to overcome this and
+      provide uninterrupted service is to have another set of servers in a different location that can continue operating during the outage at the “main” site.</p>
+    <p>It is important in this situation that the “secondary” site not only activates and begins providing service as soon as possible, but also that it automatically synchronizes the changes later on (updates balances, xDRs, etc.) to the “main” site.</p>
+    <p>All of the above is available as the PortaSwitch® <strong>site redundancy</strong> solution, which allows service providers to:</p>
+    <ul class="List65">
+      <li>
+        <p class="ListParagraph">Protect themselves against hosting facility outages.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Provide service to multiple geographic regions – even if network connectivity between those regions is lost.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">And finally, perform upgrades to new software versions with zero downtime! This last provision adds an essential benefit to the deployment of PortaSwitch® across multiple sites, since although one might hope that a hosting facility outage would
+          never happen, one can be certain that sooner or later, there will be a need to perform a software upgrade.</p>
+        <br/>
+        <img alt="Multi-site architecture" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image8.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image8.png" class="popup-image-thumbnail" width="750"/>
+        <p> </p>
+      </li>
+    </ul>
+    <p>So if the secondary site detects that the main site has become unavailable, the “stand-alone” mode is activated on the secondary site and now it provides the service to end users using the latest available snapshot of the service configuration. The
+      xDRs for consumed services and changes in balance are accumulated in a separate database (on the stand-by database server) and are taken into consideration when authorizing subsequent activities, so there is no risk of balance overdraft when the
+      stand-alone mode is used.<br/>
+      <br/>
+      <img alt="Main site is down" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image9.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image9.png" class="popup-image-thumbnail" width="750"/></p>
+    <p>Once the main site becomes available again, the secondary site starts the process of synchronizing all of the accumulated changes to the main site and then the secondary site switches back to its normal (“stand-by”) mode.</p>
+    <p> </p>
+    <p><img alt="Data merge" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image10.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image10.png" class="popup-image-thumbnail" width="750"/></p>
+    <h3 class="Heading3"><a id="Typical_deployment_scenario"></a>Typical deployment scenario</h3>
+    <p>Let’s consider the example of a possible PortaSwitch® deployment across multiple sites (a different deployment scenario might be fully cloud-based). The “primary” site hosts a standard PortaSwitch® Clustered (the Configuration server, main and replica
+      database servers, a cluster of PortaBilling® OCS and web servers and the PortaSIP® cluster).</p>
+    <p> </p>
+    <img alt="PortaSwitch® deployment across multiple sites" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image11_DeployingPortaSwitch.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image11_DeployingPortaSwitch.png" class="popup-image-thumbnail" width="750"/>
+    <p> </p>
+    <p>Within its “normal” mode of operation at the remote site:</p>
+    <ul class="List47" data-start="1" xmlns="">
+      <li>
+        <p class="ListParagraph">The stand-by database server continually retrieves changes from the main site, so it always has an up-to-date snapshot of the database from the <strong>main </strong>site.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">The OCS servers are in “stand-by” mode, so they do not actively process any requests.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">The PortaSIP® cluster provides service as usual (processing incoming calls, playing the IVR, etc.). It uses the OCS servers on the main site for authentication and writes any changes (e.g. updated SIP phone location) into the primary database.</p>
+      </li>
+    </ul>
+    <p>Another option is deploying secondary site (or sites) in a different city or country using WAN connectivity.</p>
+    <p> </p>
+    <p><img alt="Geo-redundancy" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image11.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image11.png" class="popup-image-thumbnail" width="750"/></p>
+    <p> </p>
+    <p>Whatever the choice, there is an essential requirement to provide proper interconnection between the sites. There are a lot of ways to organize the sites into a single corporate network; the selection of the technology depends on existing network
+      infrastructure, equipment or capabilities of your network provider.</p>
+    <p>Regardless of the technology you choose, all PortaSwitch® servers must be connected via virtual (or physical) Layer 2 connection(s) and be configured as hosts in a single virtual (or physical) private network.</p>
+    <h3 class="Heading3"><a id="When_disaster_strikes"></a>When disaster strikes</h3>
+    <p>If there is an outage (for instance, a motherboard failure) on a single server (e.g. PortaBilling® OCS server #1) at the primary site, the primary site continues to operate as usual. Another server within the cluster (PortaBilling® OCS server #2 in
+      our example) processes all the requests and there is no need to switch over to the secondary site.</p>
+    <p>The above statement is true for an outage on any server <strong>except</strong> the primary database, since an outage there would render all other servers on the primary site (billing engine, PortaSIP®) unable to function normally.</p>
+    <p>Therefore, the activation of the stand-alone mode on the secondary site would only happen if:</p>
+    <ul class="List22" data-start="1" xmlns="">
+      <li>
+        <p class="ListParagraph">There is an outage on the primary database server.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">There is an outage on all servers at the primary site (e.g. power failure).</p>
+      </li>
+      <li>
+        <p class="ListParagraph">There is a network outage that makes the primary site inaccessible from the secondary site.</p>
+      </li>
+    </ul>
+    <p>In this case, the <strong>stand-alone mode</strong> would be activated on the secondary site. This is a special mode of operation that allows the site to provide as many services (e.g. placing outgoing calls, receiving incoming calls, accessing IVR
+      auto attendant, placing calls using calling card IVR, etc.) for end users as is still possible. At the same time, we assume that the outage at the main site is (most likely) temporary, so when order is restored, synchronization with the primary
+      site will need to be performed. In stand-alone mode, certain operations are disabled if they could cause a breach in data integrity between the sites – for instance, it would not be possible to create new accounts, change service configurations,
+      etc.</p>
+    <p>When a service is provided on the secondary site, the billing engine continues to calculate applicable charges according to product, tariff and the responsible party’s other billing parameters (e.g. from the account that originated the call). Changes
+      to the balance and new xDRs are written into a separate database (the “delta” database, which runs on the same physical server as the stand-by database). This allows the billing engine to keep track of already consumed services and avoid a balance
+      overdraft – even if a secondary site has to operate in stand-alone mode for an extended period of time – and this, therefore, results in a clear history of all produced charges. When the primary site becomes available again, these changes are automatically
+      applied to the primary database – and the secondary site is switched back to “normal” mode. All of this happens automatically, without any need for PortaSwitch® administrator involvement – and an end user might not even notice that there were any
+      problems at the main site.</p>
+    <h3 class="Heading3"><a id="Example_scenario"></a>Example scenario</h3>
+    <p>Let’s detail what happens in case of a primary site outage using a single customer as an example. The customer “ABC” has account number 12345 provisioned on his IP phone. The customer has a current balance of $98.00, a credit limit of $100 and his
+      rate for calls within the US is $0.10/minute. The primary and secondary sites are configured as previously described.</p>
+    <ul class="List17" data-start="1" xmlns="">
+      <li>
+        <p class="ListParagraph">A power outage makes the entire primary site unavailable.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">This event is detected by a watchdog script on the secondary site so it switches into “stand-alone” mode (in particular, this enables the OCS server on the secondary site and instructs the PortaSIP® cluster on the secondary site to use it as the
+          authorization source).</p>
+      </li>
+      <li>
+        <p class="ListParagraph">If the user’s SIP phone was previously registered to the PortaSIP® cluster on the primary site, during the next re-registration attempt the phone will detect that the cluster is no longer available and attempt to contact an alternative server
+          (this list is either pre-programmed into the phone or obtained dynamically using DNS). When it reaches the PortaSIP® cluster on the secondary site it registers there. (If the phone is already registered on the PortaSIP® cluster on the secondary
+          site, nothing changes.)</p>
+      </li>
+      <li>
+        <p class="ListParagraph">When the user attempts to make an outgoing call, an authorization request is sent to the PortaBilling® OCS server on the secondary site.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">The billing engine uses the currently available balance information ($98.00) to compare it with the credit limit ($100.00) and authorizes the call for no more than 20 minutes.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">When, after 12 minutes of conversation, the user hangs up, PortaSIP® sends an accounting request to PortaBilling® so that charges are applied.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">When PortaBilling® processes the request, it calculates the amount to be charged ($1.20) and stores the balance adjustment ($1.20) and the xDR for that call (with all call details such as CLI, CLD, call connect time, etc.) in the delta database.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Then, when the user makes another call and PortaSIP® sends an authorization request, the billing engine calculates the “effective” balance as the sum of the balance in the stand-by database ($98.00) and the balance adjustment stored in the delta
+          database ($1.20). So the effective balance is $99.20 and the call will have a time limit of 8 minutes.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">The user hangs up after 5 minutes, so there is another xDR for that call with the charged amount of $0.50 written to the delta database and the balance adjustment is now $1.70.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">The next call will only be authorized for the remaining $0.30 of available funds – and can only run until the balance reaches the credit limit. This prevents balance overdraft – even if the site operates in stand-alone mode and the balances in
+          the stand-by database are not changed.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">When the primary site comes back up, synchronization takes place.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">First to happen is that funds in the amount of the balance adjustment ($1.70) are locked in the primary database – this ensures that if a customer now tries to use the service on the main site, he will only be able to spend the $0.30 that he has
+          available.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Next, the secondary site is switched back to “normal” mode.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">And then, individual xDRs are transferred to the primary database.</p>
+        <p class="ListParagraph">This two-step process (first funds lock, then actual xDR transfer) ensures the avoidance of balance overdraft on the main site while an xDR transfer is in progress. There can be a large number of xDRs (if a secondary site operated in stand-alone
+          for an extended period of time) and consequently, it can take time to replicate all of them to the primary site.</p>
+      </li>
+    </ul>
+    <h3 class="Heading3"><a id="Stand-alone_mode_restrictions"></a>Stand-alone mode restrictions</h3>
+    <p>The secondary site does not differentiate between these two types of events:</p>
+    <ul class="List37" data-start="1" xmlns="">
+      <li>
+        <p class="ListParagraph">The primary site is down or has been destroyed (power failure, hurricane, earthquake, etc.).</p>
+      </li>
+      <li>
+        <p class="ListParagraph">The primary site is still up and operational, but connectivity between the primary site and the secondary site is lost. For instance, the primary site is in city A and the secondary site is in city B. So while there is no connectivity between
+          those two city sites, each one functions normally; in each city there are users using the service.</p>
+      </li>
+    </ul>
+    <p>When the secondary site operates in stand-alone mode, it is essential that data integrity between the primary and secondary sites is protected at all times. This means that no operations should be allowed to run on the secondary site that could cause
+      data conflict when merging data change back to the primary site.</p>
+    <p>Let’s assume that during a connectivity outage between the sites the service configuration is changed as follows:</p>
+    <ul>
+      <li>
+        <p class="ListParagraph">The end user, connected to the secondary site, sets up call forwarding to phone number 123.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">On the primary site the administrator also sets up call forwarding for this user to phone number 456.</p>
+      </li>
+    </ul>
+    <p>Once connectivity between the sites is restored and a data merge is performed, it could be unclear which configuration could be regarded as valid (i.e. which number would end up as the forwarding number). This is called a “split brain” problem and,
+      of course, must be prevented from happening.</p>
+    <p>So although the secondary site can detect that the primary site is not accessible, it regards the primary site as operating normally, since users are making calls, administrators are making changes to the web interface and data is being changed there.
+      Thus, the secondary site (when activated) does not perform all of the functions of the primary site; stand-alone mode requires that some functionality must be disabled.</p>
+    <p>In short, in stand-alone mode, the only operations allowed are those that change the balance and produce xDRs. All other changes (e.g. changing service configuration attributes or creating new entities) are prohibited. While the secondary site is
+      in stand-alone mode, users can make and receive all kinds of phone calls (using IP phones or calling card IVRs) including such complex scenarios as call pickup, call transfer, etc. They can also use IVR applications that do not change the service
+      or account configuration. Such IVR applications are fully available in stand-alone mode and are as follows:</p>
+    <ul>
+      <li>
+        <p class="ListParagraph">Account top-up via voucher.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Email callback.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Balance information.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">One-stage calling.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Pass-Through IVR.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">WEB callback.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Conferencing.</p>
+      </li>
+    </ul>
+    <p>Some of these IVR application components / commands modify the service or account configuration; therefore, they are available with limitations in stand-alone mode:</p>
+    <ul>
+      <li>
+        <p class="ListParagraph">Callback calling (account registration is disabled).</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Screening IVR (fraud protection is disabled).</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Prepaid card calling (account registration is disabled).</p>
+      </li>
+      <li>
+        <p class="ListParagraph">SMS Callback (account registration and change password commands are disabled).</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Voicemail (messages are placed into the exim mail queue).</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Call Queues in auto attendant (the first caller in the queue may become disconnected before the secondary site is switched to the stand-alone mode).</p>
+      </li>
+    </ul>
+    <p>The following IVR applications change the service or account configuration and are <strong>not available</strong> in stand-alone mode:</p>
+    <ul class="List37" data-start="18" xmlns="">
+      <li>
+        <p class="ListParagraph">Account self-care.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Account top-up via credit card.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Call forwarding management.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Access to one’s own voice mailbox.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Payment Remittance – Transfer To.</p>
+      </li>
+    </ul>
+    <p>Access to the web interface is also disabled.</p>
+    <h3 class="Heading3"><a id="Promoting_a_Secondary"></a>Promoting a secondary site to the main one</h3>
+    <p>If at any point your main site is badly damaged (e.g. by fire or floodwaters) and is beyond repair, you can re-configure your secondary site to act as the main one and have a fully-functioning PortaSwitch®.</p>
+    <p>The procedure consists of the following steps:</p>
+    <ul class="List57" data-start="1" xmlns="">
+      <li>
+        <p class="ListParagraph">Initialize the Configuration server. On the secondary site, select the server that is most suitable to serve as the Configuration server and run the Configurator install script on it.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Restore the Configuration server database from the backup. The Configuration server database backup is performed daily and is stored on the secondary site’s database server(s). Use the <span class="Subtitle">cfgdb.sh </span>script to restore the
+          Configuration server database from its backup copy and run all the services required for its functioning (such as MySQL, Apache, etc.).</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Adjust the restored configuration.</p>
+        <ul data-start="3.1">
+          <li>
+            <p class="ListParagraph">On the Configuration server web interface, move servers from the failed main site to the secondary site (change their <strong>Site name</strong> property).</p>
+          </li>
+          <li>
+            <p class="ListParagraph">Make the standby database the master database: create a master database, replicate all the data from the standby database to the new master database and then delete the standby database.</p>
+          </li>
+          <li>
+            <p class="ListParagraph">Add instances that weren’t initially configured on the secondary site (such as web servers, CDR importer, etc.).</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p class="ListParagraph">Apply the configuration.</p>
+      </li>
+    </ul>
+    <p>From that point on, the secondary site acts as the main one and provides a fully-functioning PortaSwitch®, without restrictions or limitations.</p>
+  </div>
+
+</div>
+          <div class="RH-LAYOUT-BRS-container" id="rh-brs"></div>
+        </div>
+        <div class="RH-LAYOUT-RIGHTPANEL-container" id="rh-rightpanel"></div>
+      </div>
+    </div>
+  </div>
+  <div class="RH-LAYOUT-FOOTER-container" id="rh-footer">
+  <div class="rh-layout-footer-outer-box" style="background-color: #EFEFEF;">
+    <div class="rh-layout-footer-inner-left-box" style="background-color: #EFEFEF;"><img class="rh-layout-footer-imgTag" src="../template/Portorange/Group 114.svg" title="image"/>
+      <div>
+        <p style="text-align: center;background-color: #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><span style="color:#ffffff;"></span><span style="color:rgb(0,0,0,);">EN</span></p>
+      </div>
+    </div>
+    <div class="rh-layout-footer-inner-right-box" style="background-color: #EFEFEF;">
+      <div class="rh-layout-footer-inner-right-box1" style="background-color: #EFEFEF;">
+        <p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);height: 100%;line-height: 2;margin: 0;"><a href="http://www.example.com" style="color: black; text-decoration: none;">Contact Us</a></p>
+      </div>
+      <div class="rh-layout-footer-inner-right-box2" style="background-color: #EFEFEF;">
+        <p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><span style="font-size: 11pt;"><a href="http://www.example.com" style="color: black; text-decoration: none;">Privacy Policy</a></span></p>
+      </div>
+      <div class="rh-layout-footer-inner-right-box3" style="background-color: #EFEFEF;">
+        <p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><a href="http://www.example.com" style="color: black; text-decoration: none;">Terms and Conditions</a><a></a></p><a>
+      </a></div><a>
+      </a><div class="rh-layout-footer-inner-right-box4" style="background-color: #EFEFEF;"><a>
+        </a><p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><a></a><a href="http://www.example.com" style="color: black; text-decoration: none;">Blog</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".."
+    gCommonRootRelPath = ".."
+    gTopicId = "2.3"
+  
+//]]></script>
+
+
+  <script src="../template/scripts/topicpage.js"></script>
+  <script src="../whxdata/layoutconfig.js"></script>
+  <script src="../whxdata/brsdata.js"></script>
+
+  
+    
+
+            
+
+
+</body></html>

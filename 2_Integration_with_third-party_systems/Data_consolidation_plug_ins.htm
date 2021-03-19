@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <meta name="version" content="2019.0.8"/>
+  <link rel="StyleSheet" href="../template/styles/topic.min.css" type="text/css"/>
+  <link rel="StyleSheet" data-skin="true" type="text/css" href="../template/Portorange/layout.css"/>
+  <link rel="StyleSheet" data-skin="true" href="../template/Portorange/userstyles.css" type="text/css"/>
+  <title>Data consolidation plug-ins</title>
+  
+
+  <meta charset="UTF-8"/>
+  <title>Data consolidation plug-ins</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../assets/css/new_css.css"/>
+  <link rel="stylesheet" href="../assets/css/PortaSwitch_Concepts_MR89-01-AD.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <meta name="topic-status" content="Draft"/>
+</head>
+
+<body class="rh-BODY-wrapper">
+  <div class="cookie-widget-holder" id="cookie-status-widget-holder"></div>
+  <div class="RH-LAYOUT-HEADER-container  ">
+    <div class="RH-LAYOUT-HEADER-logo-box  ">
+      <div class="logo-holder" id="logo-holder"></div>
+      <div class="topic-title-holder" id="topic-title-holder"></div>
+    </div>
+    <div class="search-placeholder-class" id="search-with-help"></div>
+  </div>
+  <div class="RH-LAYOUT-BODY-container">
+    <div class="RH-LAYOUT-SEARCHRESULTS" id="rh-searchresults"></div>
+    <div class="RH-LAYOUT-LEFTPANEL-container" id="rh-leftpanel"></div>
+    <div class="rh-layout-BODY-main" id="rh-layout-main">
+      <div class="RH-LAYOUT-TOOLBAR-toolbar-box" id="rh-toolbar"></div>
+      <div class="rh-layout-BODY-body">
+        <div class="RH-LAYOUT-CENTERPANEL-container">
+          <div class="rh-selectdetails" id="rh-selectdetails"></div>
+          <div class="RH-LAYOUT-CENTERPANEL-topic-box" id="rh-topic">
+  <h2 class="Heading2"><a id="Data_consolidation_plug-ins"></a>Data consolidation plug-ins</h2>
+  <p>Let’s say you use PortaBilling® for customer management and a NMS (Network Management System) for monitoring network performance, circuit management and configuration, etc. When checking customer information (e.g. during troubleshooting) you must login
+    to both PortaBilling® <em>and </em>to the NMS.</p>
+  <p>Instead of managing two systems separately, you can integrate the NMS with PortaBilling®. Create an integration plug-in, install it in PortaBilling® and operate with the NMS from the PortaBilling® web interface.</p>
+  <p>Each time you open customer data, PortaBilling®:</p>
+  <ul>
+    <li>
+      <p class="ListParagraph">dynamically retrieves the network information related to the customer from the NMS via the API, and</p>
+    </li>
+    <li>
+      <p class="ListParagraph">displays the consolidated data on the web interface.</p>
+    </li>
+  </ul>
+  <p>The NMS data is then displayed on the custom panel.</p>
+  <p>When you modify the information (e.g. change bandwidth limits or reconfigure a router), the data is automatically sent to the NMS.</p>
+  <p>An integration plug-in is a set of application files that contain the logic for a new custom panel (e.g. fields, types, default values). While installing the plug-in, specify whether the panel appears in the main navigation menu or at a specific entity
+    level (e.g. customer, reseller). Upon installing the plug-in, the custom panel for system operation appears in PortaBilling®. This way, you can integrate PortaBilling® with any external system that supports the REST API.</p>
+  <p>Consider the following example:</p>
+  <p>Asgard Telecom has a contract management system (CMS) to store and manage customer contracts. They require:</p>
+  <ul>
+    <li>
+      <p class="ListParagraph">real-time interaction between the CMS and PortaBilling®, and</p>
+    </li>
+    <li>
+      <p class="ListParagraph">the ability to manage the contracts (e.g. Contracts feature) via the PortaBilling® web interface.</p>
+    </li>
+  </ul>
+  <p>Asgard Telecom implements a plug-in for the Contracts feature. After the plug-in installation, a new Contracts panel is available at the customer level. It permits the customer contract details to be managed. When an administrator saves a contract,
+    the plug-in pushes the data to the CMS via the API. Each time an administrator opens the Contracts panel, the data is retrieved from the CMS.</p>
+  <p> </p>
+  <p><img alt="New feature added" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image23.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image23.png" class="popup-image-thumbnail" width="1000"/></p>
+  <p> </p>
+  <p><img alt="Feature configuration" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image24.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image24.png" class="popup-image-thumbnail" width="1000"/></p>
+  <p> </p>
+  <p>This solution allows you to integrate PortaBilling® with the external systems and manage all of the data from a single place. Aside from improving workflow, it gives you additional flexibility with introducing individual business solutions using PortaBilling®.</p>
+  <p>Please contact the PortaOne® support team for assistance with how to install integration plug-ins.</p>
+
+</div>
+          <div class="RH-LAYOUT-BRS-container" id="rh-brs"></div>
+        </div>
+        <div class="RH-LAYOUT-RIGHTPANEL-container" id="rh-rightpanel"></div>
+      </div>
+    </div>
+  </div>
+  <div class="RH-LAYOUT-FOOTER-container" id="rh-footer">
+  <div class="rh-layout-footer-outer-box" style="background-color: #EFEFEF;">
+    <div class="rh-layout-footer-inner-left-box" style="background-color: #EFEFEF;"><img class="rh-layout-footer-imgTag" src="../template/Portorange/Group 114.svg" title="image"/>
+      <div>
+        <p style="text-align: center;background-color: #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><span style="color:#ffffff;"></span><span style="color:rgb(0,0,0,);">EN</span></p>
+      </div>
+    </div>
+    <div class="rh-layout-footer-inner-right-box" style="background-color: #EFEFEF;">
+      <div class="rh-layout-footer-inner-right-box1" style="background-color: #EFEFEF;">
+        <p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);height: 100%;line-height: 2;margin: 0;"><a href="http://www.example.com" style="color: black; text-decoration: none;">Contact Us</a></p>
+      </div>
+      <div class="rh-layout-footer-inner-right-box2" style="background-color: #EFEFEF;">
+        <p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><span style="font-size: 11pt;"><a href="http://www.example.com" style="color: black; text-decoration: none;">Privacy Policy</a></span></p>
+      </div>
+      <div class="rh-layout-footer-inner-right-box3" style="background-color: #EFEFEF;">
+        <p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><a href="http://www.example.com" style="color: black; text-decoration: none;">Terms and Conditions</a><a></a></p><a>
+      </a></div><a>
+      </a><div class="rh-layout-footer-inner-right-box4" style="background-color: #EFEFEF;"><a>
+        </a><p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><a></a><a href="http://www.example.com" style="color: black; text-decoration: none;">Blog</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".."
+    gCommonRootRelPath = ".."
+    gTopicId = "3.1_3"
+  
+//]]></script>
+
+
+  <script src="../template/scripts/topicpage.js"></script>
+  <script src="../whxdata/layoutconfig.js"></script>
+  <script src="../whxdata/brsdata.js"></script>
+
+  
+    
+
+            
+
+
+</body></html>

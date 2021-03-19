@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Extended data search via the API","type":"item","tilePath":"","url":"2_Integration_with_third-party_systems/API_for_data_operations.htm#Extended_data_search_via_the_API"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

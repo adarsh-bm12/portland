@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Known limitations","type":"item","tilePath":"","url":"4_Dual_Version_PortaSwitch®/Common_API_entry_point_for_Dual_Version_PortaSwitch(r).htm#Known_limitations"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

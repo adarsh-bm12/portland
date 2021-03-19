@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Server system recommendations","type":"item","tilePath":"","url":"PortaSwitch®_Architecture_and_Concepts/Hardware_and_software_requirements.htm#_Server_system_recommendations"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();
