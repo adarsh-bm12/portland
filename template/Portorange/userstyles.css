@@ -535,6 +535,16 @@
 	font-size: 11pt;	
 }
 
+.rh-layout-INDEX-selected-item {
+	font-family: Roboto;
+	font-size: 11pt;
+}
+
+.rh-layout-LEFTPANEL-tree-item-text {
+	font-family: Roboto;
+	font-size: 11pt;
+}
+
 .RH-LAYOUT-TOOLBAR-panel-show {
   background-image: url('expand_toc.svg');;;
 }
