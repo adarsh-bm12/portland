@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Updated","type":"item","tilePath":"","url":"portaswitch®_architecture_and_concepts/what_is_new_in_maintenance_release_89.htm#updated"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

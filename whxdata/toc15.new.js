@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Site-to-site VPN for PortaSwitch® deployed on the premises and in the cloud","type":"book","tilePath":"","key":"toc16"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

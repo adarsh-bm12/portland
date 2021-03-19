@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <meta name="version" content="2019.0.8"/>
+  <link rel="StyleSheet" href="../template/styles/topic.min.css" type="text/css"/>
+  <link rel="StyleSheet" data-skin="true" type="text/css" href="../template/portorange/layout.css"/>
+  <link rel="StyleSheet" data-skin="true" href="../template/portorange/userstyles.css" type="text/css"/>
+  <title>Disk space requirements</title>
+  
+
+  <meta charset="UTF-8"/>
+  <title>Disk space requirements</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/new_css.css"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/portaswitch_concepts_mr89-01-ad.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <meta name="topic-status" content="Draft"/>
+</head>
+
+<body class="rh-BODY-wrapper">
+  <div class="cookie-widget-holder" id="cookie-status-widget-holder"></div>
+  <div class="RH-LAYOUT-HEADER-container  ">
+    <div class="RH-LAYOUT-HEADER-logo-box  ">
+      <div class="logo-holder" id="logo-holder"></div>
+      <div class="topic-title-holder" id="topic-title-holder"></div>
+    </div>
+    <div class="search-placeholder-class" id="search-with-help"></div>
+  </div>
+  <div class="RH-LAYOUT-BODY-container">
+    <div class="RH-LAYOUT-SEARCHRESULTS" id="rh-searchresults"></div>
+    <div class="RH-LAYOUT-LEFTPANEL-container" id="rh-leftpanel"></div>
+    <div class="rh-layout-BODY-main" id="rh-layout-main">
+      <div class="RH-LAYOUT-TOOLBAR-toolbar-box" id="rh-toolbar"></div>
+      <div class="rh-layout-BODY-body">
+        <div class="RH-LAYOUT-CENTERPANEL-container">
+          <div class="rh-selectdetails" id="rh-selectdetails"></div>
+          <div class="RH-LAYOUT-CENTERPANEL-topic-box" id="rh-topic">
+  <h2 class="Heading2"><a id="_Disk_space_requirements"></a>Disk space requirements</h2>
+  <p>When buying hardware for your servers, you obviously want to be sure that their capability will be sufficient to suit the demands of your business. Among other hardware requirements, the HDD capacity should be carefully considered to ensure that it
+    will satisfy the desired traffic patterns as well as future business growth opportunities.</p>
+  <p>Disk space requirements can be estimated based on business scenarios, traffic patterns and the desired PortaSwitch® configuration. Consider the examples below.</p>
+  <h4 class="Heading4"><a id="PortaBilling®,_PortaSIP®_and_log_storage_servers"></a>PortaBilling®, PortaSIP® and log storage servers</h4>
+  <p>We will use the following figures to estimate the disk space required:</p>
+  <ul class="List70">
+    <li>
+      <p class="ListParagraph">Each call processed by PortaSwitch® will increase SIP logs by approximately 100 KB and billing logs by approximately 50 KB.</p>
+    </li>
+    <li>
+      <p class="ListParagraph">Each registration processed by PortaSwitch® will increase SIP logs by approximately 10 KB and billing logs by approximately 5 KB.</p>
+    </li>
+  </ul>
+  <p>We will also use the following assumptions for the sake of simplicity:</p>
+  <ul>
+    <li>
+      <p class="ListParagraph">The average call duration is around 5 minutes.</p>
+    </li>
+    <li>
+      <p class="ListParagraph">A call success rate (ASR) is 50% (the industry norm).</p>
+    </li>
+    <li>
+      <p class="ListParagraph">There are ten thousand registered phones with an average re-registration period of 5 minutes.</p>
+    </li>
+    <li>
+      <p class="ListParagraph">The PortaSIP® server and the PortaBilling® servers contain uncompressed log files for the last three days and all log files for the required period (e.g. 10 days) will be available on the centralized log storage (7 compressed and 3 uncompressed).</p>
+    </li>
+    <li>
+      <p class="ListParagraph">Log compression ratio is 5% (bzip2).</p>
+    </li>
+  </ul>
+  <p>Using the figures and assumptions described above, we can estimate how much disk space is needed to process 10 MMM (ten million minutes per month). Taking into consideration that for every failed call, logs and xDRs are also generated, we need to multiply
+    the total sum by two (ASR 50%). Note that we calculate an average number of calls per day using the following formula: 10,000,000 minutes / 5 minutes / 30 days = 66,666 calls and then round up this number to 70,000, for convenience.</p>
+  <ul>
+    <li><em>PortaBilling</em>®:
+      <ul>
+        <li>
+          <p class="ListParagraph">Calls: 70,000 calls per day * 50 KB * 2 ≈ 7 GB for one day</p>
+        </li>
+        <li>
+          <p class="ListParagraph">Registrations: 288 registrations / day per phone * 10,000 phones * 5 KB ≈ 14.4 GB for one day</p>
+        </li>
+        <li>
+          <p class="ListParagraph">Total for one day: 7 GB + 14.4 GB = 21.4 GB</p>
+        </li>
+        <li>
+          <p class="ListParagraph">Total for three days: 21.4 GB * 3 days ≈ 64.2 GB</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li><em>PortaSIP</em>®:
+      <ul>
+        <li>
+          <p class="ListParagraph">Total for three days: ≈ 42.8 * 3 days ≈ 128.4 GB</p>
+        </li>
+        <li>
+          <p class="ListParagraph">Total for one day: 14 GB + 28.8 GB ≈ 42.8 GB</p>
+        </li>
+        <li>
+          <p class="ListParagraph">Registrations: 288 registrations / day per phone * 10,000 phones * 10 KB ≈ 28.8 GB for one day</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <p class="ListParagraph"><em>The centralized log storage</em>:</p>
+      <p class="ListParagraph">3 days * (21.4 GB + 42.8 GB) + 7 days * (21.4 GB + 42.8 GB) * 5% ≈ 192.6 GB + 22.5 GB ≈ 215 GB</p>
+    </li>
+  </ul>
+  <h4 class="Heading4"><a id="Database_servers"></a>Database servers</h4>
+  <p>We will use the following figures to estimate how much disk space is needed on the database servers:</p>
+  <ul class="List36" data-start="1" xmlns="">
+    <li>
+      <p class="ListParagraph">Each xDR takes up about 1.5 KB database space.</p>
+    </li>
+    <li>
+      <p class="ListParagraph">PortaBilling®produces at least 2 xDRs for each call. Actually, the number of xDRs produced depends on the call scenario and can reach up to 5–7 or even more xDRs for complex calls. For simplicity’s sake, we assume that on average, 3 xDRs are produced
+        per call.</p>
+    </li>
+  </ul>
+  <p>We will also use the following assumptions for the sake of simplicity:</p>
+  <ul>
+    <li>
+      <p class="ListParagraph">The average call duration is around 5 minutes.</p>
+    </li>
+    <li>
+      <p class="ListParagraph">A call success rate (ASR) is 50% (the industry norm).</p>
+    </li>
+    <li>
+      <p class="ListParagraph">You will need to allocate space for MySQL binary log files (25–100 GB depending on the rate of usage of the database). Let’s allocate 50 GB for binary log files.</p>
+    </li>
+    <li>
+      <p class="ListParagraph">In addition, for performing operations such as backup, you will need to reserve an amount of free space roughly equal to the projected database size.</p>
+    </li>
+    <li>
+      <p class="ListParagraph">You will keep xDRs for the previous 60 days.</p>
+    </li>
+  </ul>
+  <p>Using the figures and assumptions described above we can estimate the disk space that will be consumed to process 10 MMM (ten million minutes per month) on the database servers:</p>
+  <ul>
+    <li>
+      <p class="ListParagraph">70,000 calls per day * 1.5 KB * 3 CDRs * 60 days * 2 * 2 ≈ ≈ 75.6 GB</p>
+    </li>
+  </ul>
+  <p>So, not taking into the consideration the MySQL binary log files and reserving space for operations such as backup, 75.6 GB is required on the database servers to process 10 MMM.</p>
+  <h4 class="Heading4"><a id="Estimates_based_on_different_traffic_patterns"></a>Estimates based on different traffic patterns</h4>
+  <p>The following table shows the minimum amount of disk space required on each server for installations with different traffic patterns. This includes the 60 GB minimum necessary for system installation.</p>
+  <div align="left">
+    <table class="NormalTable">
+      <tbody>
+        <tr>
+          <th rowspan="2" width="92">
+            <p class="TableRowTitle">Traffic pattern</p>
+          </th>
+          <th rowspan="2" width="81">
+            <p class="TableRowTitle">The database servers</p>
+          </th>
+          <th width="97">
+            <p class="TableRowTitle">PortaBilling® server</p>
+          </th>
+          <th width="94">
+            <p class="TableRowTitle">PortaSIP® server</p>
+          </th>
+          <th rowspan="2" width="96">
+            <p class="TableRowTitle">The centralized log storage server</p>
+          </th>
+        </tr>
+        <tr>
+          <th colspan="2" width="191">
+            <p style="font-weight:normal; margin: 0; padding: 0;"><em>keep logs for last two days only</em></p>
+            <em><span></span></em></th>
+        </tr>
+        <tr>
+          <td>
+            <p class="TableParagraph">10 MMM,<br/> 10,000
+              <br/> registered phones</p>
+          </td>
+          <td>
+            <p class="TableParagraph">185 GB</p>
+          </td>
+          <td>
+            <p class="TableParagraph">124 GB</p>
+          </td>
+          <td>
+            <p class="TableParagraph">188 GB</p>
+          </td>
+          <td>
+            <p class="TableParagraph">275 GB</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="TableParagraph">20 MMM,<br/> 20,000
+              <br/> registered phones</p>
+          </td>
+          <td>
+            <p class="TableParagraph">260 GB</p>
+          </td>
+          <td>
+            <p class="TableParagraph">188 GB</p>
+          </td>
+          <td>
+            <p class="TableParagraph">316 GB</p>
+          </td>
+          <td>
+            <p class="TableParagraph">490 GB</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="TableParagraph">50 MMM,<br/> 50,000
+              <br/> registered phones</p>
+          </td>
+          <td>
+            <p class="TableParagraph">485 GB</p>
+          </td>
+          <td>
+            <p class="TableParagraph">220 GB*</p>
+          </td>
+          <td>
+            <p class="TableParagraph">273 GB**</p>
+          </td>
+          <td>
+            <p class="TableParagraph">1 TB</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="TableParagraph">100 MMM,<br/> 100,000 registered phones</p>
+          </td>
+          <td>
+            <p class="TableParagraph">860 GB</p>
+          </td>
+          <td>
+            <p class="TableParagraph">380 GB*</p>
+          </td>
+          <td>
+            <p class="TableParagraph">487 GB**</p>
+          </td>
+          <td>
+            <p class="TableParagraph">2.2 TB</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><em>* If two PortaBilling® servers provide AAA services, then this amount of disk space will be needed on each server.</em></p>
+  <p><em>** If three PortaSIP® servers process traffic, then this amount of disk space will be needed on each server.</em></p>
+  <p class="redNote"><strong>NOTE</strong>: The above figures are minimal and depending on the services provided, may grow (e.g. call records take up disk space. In order to store 15 hours of recorded conversations, 1 GB of disk space is required).</p>
+
+</div>
+          <div class="RH-LAYOUT-BRS-container" id="rh-brs"></div>
+        </div>
+        <div class="RH-LAYOUT-RIGHTPANEL-container" id="rh-rightpanel"></div>
+      </div>
+    </div>
+  </div>
+  <div class="RH-LAYOUT-FOOTER-container" id="rh-footer">
+  <div class="rh-layout-footer-outer-box" style="background-color: #EFEFEF;">
+    <div class="rh-layout-footer-inner-left-box" style="background-color: #EFEFEF;"><img class="rh-layout-footer-imgTag" src="../template/portorange/group 114.svg" title="image"/>
+      <div>
+        <p style="text-align: center;background-color: #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><span style="color:#ffffff;"></span><span style="color:rgb(0,0,0,);">EN</span></p>
+      </div>
+    </div>
+    <div class="rh-layout-footer-inner-right-box" style="background-color: #EFEFEF;">
+      <div class="rh-layout-footer-inner-right-box1" style="background-color: #EFEFEF;">
+        <p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);height: 100%;line-height: 2;margin: 0;"><a href="http://www.example.com" style="color: black; text-decoration: none;">Contact Us</a></p>
+      </div>
+      <div class="rh-layout-footer-inner-right-box2" style="background-color: #EFEFEF;">
+        <p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><span style="font-size: 11pt;"><a href="http://www.example.com" style="color: black; text-decoration: none;">Privacy Policy</a></span></p>
+      </div>
+      <div class="rh-layout-footer-inner-right-box3" style="background-color: #EFEFEF;">
+        <p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><a href="http://www.example.com" style="color: black; text-decoration: none;">Terms and Conditions</a><a></a></p><a>
+      </a></div><a>
+      </a><div class="rh-layout-footer-inner-right-box4" style="background-color: #EFEFEF;"><a>
+        </a><p style="text-align: center;background-color:  #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><a></a><a href="http://www.example.com" style="color: black; text-decoration: none;">Blog</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".."
+    gCommonRootRelPath = ".."
+    gTopicId = "1.3"
+  
+//]]></script>
+
+
+  <script src="../template/scripts/topicpage.js"></script>
+  <script src="../whxdata/layoutconfig.js"></script>
+  <script src="../whxdata/brsdata.js"></script>
+
+  
+    
+
+            
+
+
+</body></html>
