@@ -7,7 +7,7 @@ rh._.exports(defaultTopic);
 rh.consts('DEFAULT_TOPIC', encodeURI("PortaSwitch®_Architecture_and_Concepts/Copyright_notice.htm"));
 rh.consts('HOME_FILEPATH', encodeURI('PortaSwitch®_Architecture_and_Concepts/Copyright_notice.htm'));
 rh.consts('START_FILEPATH', encodeURI('PortaSwitch®_Architecture_and_Concepts/Copyright_notice.htm'));
-rh.consts('HELP_ID', '33abd817-4cb0-4e25-a128-1ff40bc639d8' || 'preview');
+rh.consts('HELP_ID', '0ba0aa24-3abf-4fb0-a7bb-833edc51c4d4' || 'preview');
 rh.consts('LNG_SUBSTR_SEARCH', 0);
 
 model.publish(rh.consts('KEY_LNG_NAME'), "en");
