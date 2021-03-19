@@ -47,32 +47,41 @@
     <h4 class="Heading4"><a id="What_is_the_difference_between_Zero-downtime_update_(ZDU)_and_Dual_Version_PortaSwitch"></a>What is the difference between Zero-downtime update (ZDU) and Dual Version PortaSwitch®?</h4>
     <p>ZDU allows to update the whole system to the new software version in a single step. Dual Version PortaSwitch® solution implies the following:</p>
     <ul class="List10" data-start="61" xmlns="">
-      <li>Simultaneous operation of two independent systems in different software versions linked with each other.</li>
-      <li>Consistent migration of customers from a system with a lower software version to a higher version system.
-        <p>Using the Dual Version PortaSwitch® solution, you can gradually migrate customers from older releases to a newer release in 2-3 months (exact time depends on the database size).</p>
-        <p>The maximal update “jump” span for ZDU is 5 releases because the nearest LTS cannot be crossed in such a “jump.” Maximal “jumps” using Dual Version PortaSwitch® solution are much wider but require obligatory checkpoints every 15 releases (i.e.,
-          MR55→MR70 or MR70→MR85).</p>
+      <li>
+        <p class="ListParagraph">Simultaneous operation of two independent systems in different software versions linked with each other.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Consistent migration of customers from a system with a lower software version to a higher version system.</p>
       </li>
     </ul>
+    <p>Using the Dual Version PortaSwitch® solution, you can gradually migrate customers from older releases to a newer release in 2-3 months (exact time depends on the database size).</p>
+    <p>The maximal update “jump” span for ZDU is 5 releases because the nearest LTS cannot be crossed in such a “jump.” Maximal “jumps” using Dual Version PortaSwitch® solution are much wider but require obligatory checkpoints every 15 releases (i.e., MR55→MR70
+      or MR70→MR85).</p>
     <h4 class="Heading4"><a id="Does_the_Dual_Version_architecture_provide_redundancy"></a>Does the Dual Version architecture provide redundancy?</h4>
     <p>The target and source systems of the Dual Version solution operate independently and do not involve redundancy as part of the design. If a data center outage occurs for either the source or target system during a long migration, it’s going to be visible.
       So the Dual Version solution does not provide redundancy by itself, but instead works in conjunction with the current geo-redundancy and ZDU functionality available in PortaSwitch®.</p>
     <p>Since Dual Version PortaSwitch® involves two systems running in parallel, the source and target systems can be used for geo-redundancy to ensure uninterrupted service provisioning for every system in Dual Version PortaSwitch®.</p>
     <p>In most cases, the redundancy can be achieved in two ways: by deploying billing, SIP, and database clusters, or by dispersing the systems across multiple sites. The latter solution provides high-availability and geo-redundancy options.</p>
-    <h4 class="Heading4">Do I need to deploy a dispatching SBC (DSBC) if I already have the PortaSIP® cluster?</h4>
+    <h4 class="Heading4"><a id="Do_I_need_to_deploy_a_dispatching_SBC_(DSBC)_if_I_already_have_the_PortaSIP®_cluster"></a>Do I need to deploy a dispatching SBC (DSBC) if I already have the PortaSIP® cluster?</h4>
     <p>Yes, you always need to have a separate DSBC for Dual Version PortaSwitch®. Even if you have a fairly new PortaSIP®, it’s still a part of your source system and is only aware of that specific system. If you want to move, for instance, from MR70 to
       MR85, you need a DSBC in front of your PortaSIP®. DSBC decides whether to route calls to the PortaSIP® cluster on the source system or the target system.</p>
-    <p><a id="Do_I_need_to_deploy_a_dispatching_SBC_(DSBC)_if_I_already_have_the_PortaSIP®_cluster"></a>The DSBC links systems in Dual Version PortaSwitch® and is required for delivering calls across systems. It “knows” where the account record is located
-      and delivers the call accordingly. You can configure DSBC on a real or virtual server or in the PortaOne Cloud.</p>
+    <p>The DSBC links systems in Dual Version PortaSwitch® and is required for delivering calls across systems. It “knows” where the account record is located and delivers the call accordingly. You can configure DSBC on a real or virtual server or in the
+      PortaOne Cloud.</p>
     <h4 class="Heading4"><a id="Does_the_DSBC_participate_in_media_streaming"></a>Does the DSBC participate in media streaming?</h4>
     <p>No. The DSBC only participates in the signaling path of the call by distributing incoming call initiation requests across systems for processing. When a call is established, endpoints exchange media streams directly (except for calls with RTPProxy,
       where the media stream goes through SIP Cluster without involving the DSBC), or it can take place via the RTPProxies of their respective PortaSIP® clusters.</p>
     <h4 class="Heading4"><a id="Where_can_I_deploy_the_target_system"></a>Where can I deploy the target system?</h4>
     <p>You have the choice to either:</p>
     <ul>
-      <li>Use dedicated hardware (on-premise or virtual).</li>
-      <li>Launch the target system fully in the PortaOne Cloud.</li>
-      <li>Use the PortaOne Cloud for the DSBC and the dedicated hardware (on-premise or virtual) for the rest of the target system.</li>
+      <li>
+        <p class="ListParagraph">Use dedicated hardware (on-premise or virtual).</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Launch the target system fully in the PortaOne Cloud.</p>
+      </li>
+      <li>
+        <p class="ListParagraph">Use the PortaOne Cloud for the DSBC and the dedicated hardware (on-premise or virtual) for the rest of the target system.</p>
+      </li>
     </ul>
     <p>The cloud can be a temporary migration tool, or you can use this as an opportunity to liberate your operations from the physical data center permanently. At PortaOne, we consider the cloud to be the way to move forward and future-proof your operations.
       However, to limit latency, we recommend deploying the DSBC (by default, deployed on the target system) as geographically close to the source system as possible.</p>
@@ -100,82 +109,72 @@
     <h4 class="Heading4"><a id="How_many_customers_can_I_batch_migrate_at_a_time"></a>How many customers can I batch migrate at a time?</h4>
     <p>You can batch migrate any number of customers at a time. The number of customers in a batch is arbitrary. And the time it takes to migrate the batch depends on the number of accounts per customer and the overall capacity of the given Dual Version
       PortaSwitch® installation. For example (based on real customer data, approximated):]</p>
-    <p> </p>
     <div align="left">
-      <table border="1.3" cellspacing="0" class="NormalTable" style="width:468.0px">
-        <colgroup xmlns="">
-          <col style="width:84px"/>
-          <col style="width:72px"/>
-          <col style="width:66px"/>
-          <col style="width:66px"/>
-          <col style="width:102px"/>
-          <col style="width:78px"/>
-        </colgroup>
+      <table class="NormalTable">
         <tbody>
           <tr>
-            <td>
-              <p class="NormalWeb">Customers</p>
+            <th>
+              <p class="TableRowTitle">Customers</p>
+            </th>
+            <th>
+              <p class="TableRowTitle">Accounts</p>
+            </th>
+            <th>
+              <p class="TableRowTitle">VDCH discount history records</p>
+            </th>
+            <th>
+              <p class="TableRowTitle">NAUD Internet session records</p>
+            </th>
+            <th>
+              <p class="TableRowTitle">CDR_Accounts/CDR_Accounts Failed</p>
+            </th>
+            <th>
+              <p class="TableRowTitle">Migration time (seconds)</p>
+            </th>
+          </tr>
+          <tr>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">1</p>
             </td>
-            <td>
-              <p class="NormalWeb">Accounts</p>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">5</p>
             </td>
-            <td>
-              <p class="NormalWeb">VDCH discount history records</p>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">15</p>
             </td>
-            <td>
-              <p class="NormalWeb">NAUD Internet session records</p>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">330</p>
             </td>
-            <td>
-              <p class="NormalWeb">CDR_Accounts/CDR_Accounts Failed</p>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">255</p>
             </td>
-            <td>
-              <p class="NormalWeb">Migration time (seconds)</p>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">8</p>
             </td>
           </tr>
           <tr>
-            <td>
-              <p class="NormalWeb">1</p>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">1</p>
             </td>
-            <td>
-              <p class="NormalWeb">5</p>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">19</p>
             </td>
-            <td>
-              <p class="NormalWeb">15</p>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">236</p>
             </td>
-            <td>
-              <p class="NormalWeb">330</p>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">0</p>
             </td>
-            <td>
-              <p class="NormalWeb">255</p>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">1375</p>
             </td>
-            <td>
-              <p class="NormalWeb">8</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p class="NormalWeb">1</p>
-            </td>
-            <td>
-              <p class="NormalWeb">19</p>
-            </td>
-            <td>
-              <p class="NormalWeb">236</p>
-            </td>
-            <td>
-              <p class="NormalWeb">0</p>
-            </td>
-            <td>
-              <p class="NormalWeb">1375</p>
-            </td>
-            <td>
-              <p class="NormalWeb">105</p>
+            <td class="description">
+              <p class="TableParagraph" style="margin:0;">105</p>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p> </p>
     <p>Several parallel threads deal with entities in the batch to provide maximally fast customer migration thanks to the new smart Porter utility.</p>
     <p>Each thread processes its customer and starts transferring the data belonging to that customer. In this process, threads also branch into parallel “workers” that work in a single customer&#39;s context, reducing the overall migration downtime.</p>
     <p>For example, if the customer has 4 accounts and 4 workers, then each can take one account and start transferring its data to the target system. Threads allow you to port several customers at once, thus making better use of the hardware. These parameters
@@ -204,15 +203,21 @@
     <h4 class="Heading4"><a id="How_many_public_IPs_do_I_need_to_deploy_a_DSBC_for_Dual_Version_PortaSwitch"></a>How many public IPs do I need to deploy a DSBC for Dual Version PortaSwitch®?</h4>
     <p>The minimum requirements are:</p>
     <ul class="List10" data-start="66" xmlns="">
-      <li>1 IP address for Web Dispatcher*</li>
-      <li>1 IP address for RADIUS/Diameter Dispatcher</li>
-      <li>1 IP address for each SIP Cluster on the source system</li>
+      <li>
+        <p class="ListParagraph">1 IP address for Web Dispatcher*</p>
+      </li>
+      <li>
+        <p class="ListParagraph">1 IP address for RADIUS/Diameter Dispatcher</p>
+      </li>
+      <li>
+        <p class="ListParagraph">1 IP address for each SIP Cluster on the source system</p>
+      </li>
     </ul>
-    <p>* Web Dispatcher and the RADIUS/Diameter Dispatcher could technically share the same IP in the context of DSBC, but that would bring inconveniences to customers. For example, if they currently direct the RADIUS/Diameter traffic to IP address 1 and
-      the Web traffic to IP address 2, you can deploy the DSBC where the Web Dispatcher and the RADIUS/Diameter Dispatcher nodes are both using IP address 3. In this case, all the customers need to reconfigure their settings and re-route both their RADIUS/Diameter
-      and Web traffic to IP address 3.</p>
-    <p>Or you can dispatch the DSBC using IP address 1 for the RADIUS/Diameter traffic and IP address 2 for the Web traffic (consequently, you will need to allocate new IP addresses for these nodes on the source systems and later on the target systems) and
-      the customers won’t even notice that anything has changed in the system, as the DSCB will route the traffic incoming to IP address 1 and IP address 2 to the corresponding new IP addresses on the source and on the target systems.</p>
+    <p>* Web Dispatcher and the RADIUS/Diameter Dispatcher could technically share the same IP in the context of DSBC, but that would bring inconveniences to customers. For example, if they currently direct the RADIUS/Diameter traffic to <strong>IP address 1</strong>      and the Web traffic to <strong>IP address 2</strong>, you can deploy the DSBC where the Web Dispatcher and the RADIUS/Diameter Dispatcher nodes are both using <strong>IP address 3</strong>. In this case, all the customers need to reconfigure their
+      settings and re-route both their RADIUS/Diameter and Web traffic to <strong>IP address 3</strong>.</p>
+    <p>Or you can dispatch the DSBC using <strong>IP address 1</strong> for the RADIUS/Diameter traffic and <strong>IP address 2</strong> for the Web traffic (consequently, you will need to allocate new IP addresses for these nodes on the source systems
+      and later on the target systems) and the customers won’t even notice that anything has changed in the system, as the DSCB will route the traffic incoming to <strong>IP address 1</strong> and <strong>IP address 2</strong> to the corresponding new
+      IP addresses on the source and on the target systems.</p>
     <h4 class="Heading4"><a id="How_much_time_does_it_take_to_prepare_everything_for_the_migration_time_to_deploy,_configure,_prepare_the_source_and_target_systems_for_the_migration"></a>How much time does it take to prepare everything for the migration (time to deploy, configure,
       prepare the source and target systems for the migration)?</h4>
     <p>This depends on many factors. The isolated technical procedure of deployment consists of running just a few commands because in the new Dual Version PortaSwitch®, everything is maximally automated. In the testing lab, the full preparation process
@@ -234,11 +239,6 @@
     <h4 class="Heading4"><a id="What_happens_with_the_xDR_import_process_during_the_customer&#39;s_migration_in_Dual_Version_PortaSwitch"></a>What happens with the xDR import process during the customer&#39;s migration in Dual Version PortaSwitch®?</h4>
     <p>The same logic as for other <a id="_Hlk50405149"></a>services that take place during the migration process of the customer applies here. Customer migration time is a downtime period for services. The import of xRDs for the customer in migration will
       fail, but the failed xDRs can be selected and set for reprocessing.</p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
   </div>
 
 </div>
