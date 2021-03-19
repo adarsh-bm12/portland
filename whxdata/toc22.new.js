@@ -1,1 +1,0 @@
-(function() {    var toc =  [{"name":"About the target system setup","type":"item","tilePath":"","url":"4_dual_version_portaswitch®/concept_of_dual_version_portaswitch®.htm#about_the_target_system_setup"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();
