@@ -1,1 +1,1 @@
-(function() {    var toc =  [{"name":"Configuration","type":"item","tilePath":"","url":"1_system_architecture/portaone_monitoring_system.htm#configuration"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();
+(function() {    var toc =  [{"name":"Configuration","type":"item","tilePath":"","url":"1_System_Architecture/PortaOne_monitoring_system.htm#Configuration"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

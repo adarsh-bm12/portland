@@ -2,12 +2,12 @@
 (function() {
 rh = window.rh;
 model = rh.model;
-var defaultTopic = "portaswitch®_architecture_and_concepts/copyright_notice.htm";
+var defaultTopic = "PortaSwitch®_Architecture_and_Concepts/Copyright_notice.htm";
 rh._.exports(defaultTopic);
-rh.consts('DEFAULT_TOPIC', encodeURI("portaswitch®_architecture_and_concepts/copyright_notice.htm"));
-rh.consts('HOME_FILEPATH', encodeURI('portaswitch®_architecture_and_concepts/copyright_notice.htm'));
-rh.consts('START_FILEPATH', encodeURI('portaswitch®_architecture_and_concepts/copyright_notice.htm'));
-rh.consts('HELP_ID', '91f08d2a-a428-4ed1-a3de-09c2d76a96fc' || 'preview');
+rh.consts('DEFAULT_TOPIC', encodeURI("PortaSwitch®_Architecture_and_Concepts/Copyright_notice.htm"));
+rh.consts('HOME_FILEPATH', encodeURI('PortaSwitch®_Architecture_and_Concepts/Copyright_notice.htm'));
+rh.consts('START_FILEPATH', encodeURI('PortaSwitch®_Architecture_and_Concepts/Copyright_notice.htm'));
+rh.consts('HELP_ID', '46bbe1c3-f1e0-4ecf-9945-de5471dd3229' || 'preview');
 rh.consts('LNG_SUBSTR_SEARCH', 0);
 
 model.publish(rh.consts('KEY_LNG_NAME'), "en");
@@ -17,6 +17,6 @@ model.publish(rh.consts('KEY_LNG'), {"BreadcrumbStart":"Home: ","BrsNextButton":
 model.publish(rh.consts('KEY_HEADER_TITLE'), "PortaSwitch® Architecture and Concepts");
 model.publish(rh.consts('PDF_FILE_NAME'), "");
 model.publish(rh.consts('MAX_SEARCH_RESULTS'), "20");
-model.publish(rh.consts('KEY_SKIN_FOLDER_NAME'), "portorange");
+model.publish(rh.consts('KEY_SKIN_FOLDER_NAME'), "Portorange");
 model.publish(rh.consts('KEY_SUBSTR_SEARCH'), "");
 })();
