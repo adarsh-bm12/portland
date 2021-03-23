@@ -1,1 +1,1 @@
-(function() {    var toc =  [{"name":"About the target system setup","type":"item","tilePath":"","url":"4_Dual_Version_PortaSwitch®/Concept_of_Dual_Version_PortaSwitch®.htm#About_the_target_system_setup"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();
+(function() {    var toc =  [{"name":"Configuration:","type":"item","tilePath":"","url":"3_portaone_ipaas/portaone_ipaas.htm#configuration_2"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

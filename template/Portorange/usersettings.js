@@ -19,7 +19,7 @@ var backgroundColor = "#509de6";
 	
 	model.publish(rh.consts('KEY_SEARCH_HIGHLIGHT_COLOR'), "#000000")
 	model.publish(rh.consts('KEY_SEARCH_BG_COLOR'), "#ffff00")
-	model.publish(rh.consts('DATA_TOC_IMG_DATA_SET'),["template/Portorange/tocimg1.png","template/Portorange/tocimg2.png","template/Portorange/tocimg3.png","template/Portorange/tocimg4.png","template/Portorange/tocimg5.png","template/Portorange/tocimg6.png","template/Portorange/tocimg7.png","template/Portorange/tocimg8.png"]);
+	model.publish(rh.consts('DATA_TOC_IMG_DATA_SET'),["template/portorange/tocimg1.png","template/portorange/tocimg2.png","template/portorange/tocimg3.png","template/portorange/tocimg4.png","template/portorange/tocimg5.png","template/portorange/tocimg6.png","template/portorange/tocimg7.png","template/portorange/tocimg8.png"]);
 	model.publish(rh.consts('SHOW_SKIN_BCRUMBS'), true);
 	model.publish(rh.consts('KEY_SHOW_ACCORDIAN'), false);
 	model.publish(rh.consts('KEY_TOOLBAR_SEARCH'), false);

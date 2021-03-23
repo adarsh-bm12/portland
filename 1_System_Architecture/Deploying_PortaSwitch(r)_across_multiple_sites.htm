@@ -8,8 +8,8 @@
   <meta name="generator" content="Adobe RoboHelp 2019"/>
   <meta name="version" content="2019.0.8"/>
   <link rel="StyleSheet" href="../template/styles/topic.min.css" type="text/css"/>
-  <link rel="StyleSheet" data-skin="true" type="text/css" href="../template/Portorange/layout.css"/>
-  <link rel="StyleSheet" data-skin="true" href="../template/Portorange/userstyles.css" type="text/css"/>
+  <link rel="StyleSheet" data-skin="true" type="text/css" href="../template/portorange/layout.css"/>
+  <link rel="StyleSheet" data-skin="true" href="../template/portorange/userstyles.css" type="text/css"/>
   <title>Deploying PortaSwitch® across multiple sites</title>
   
 
@@ -17,7 +17,7 @@
   <title>Deploying PortaSwitch® across multiple sites</title>
   <meta name="generator" content="Adobe RoboHelp 2019"/>
   <link rel="stylesheet" href="../assets/css/new_css.css"/>
-  <link rel="stylesheet" href="../assets/css/PortaSwitch_Concepts_MR89-01-AD.css"/>
+  <link rel="stylesheet" href="../assets/css/portaswitch_concepts_mr89-01-ad.css"/>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="generator" content="Adobe RoboHelp 2019"/>
@@ -62,7 +62,7 @@
         <p class="ListParagraph">And finally, perform upgrades to new software versions with zero downtime! This last provision adds an essential benefit to the deployment of PortaSwitch® across multiple sites, since although one might hope that a hosting facility outage would
           never happen, one can be certain that sooner or later, there will be a need to perform a software upgrade.</p>
         <br/>
-        <img alt="Multi-site architecture" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image8.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image8.png" class="popup-image-thumbnail" width="750"/>
+        <img alt="Multi-site architecture" src="../assets/images/portaswitch_concepts_mr89-01-ad_files/image8.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image8.png" class="popup-image-thumbnail" width="750"/>
         <p> </p>
       </li>
     </ul>
@@ -70,15 +70,15 @@
       xDRs for consumed services and changes in balance are accumulated in a separate database (on the stand-by database server) and are taken into consideration when authorizing subsequent activities, so there is no risk of balance overdraft when the
       stand-alone mode is used.<br/>
       <br/>
-      <img alt="Main site is down" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image9.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image9.png" class="popup-image-thumbnail" width="750"/></p>
+      <img alt="Main site is down" src="../assets/images/portaswitch_concepts_mr89-01-ad_files/image9.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image9.png" class="popup-image-thumbnail" width="750"/></p>
     <p>Once the main site becomes available again, the secondary site starts the process of synchronizing all of the accumulated changes to the main site and then the secondary site switches back to its normal (“stand-by”) mode.</p>
     <p> </p>
-    <p><img alt="Data merge" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image10.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image10.png" class="popup-image-thumbnail" width="750"/></p>
+    <p><img alt="Data merge" src="../assets/images/portaswitch_concepts_mr89-01-ad_files/image10.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image10.png" class="popup-image-thumbnail" width="750"/></p>
     <h3 class="Heading3"><a id="Typical_deployment_scenario"></a>Typical deployment scenario</h3>
     <p>Let’s consider the example of a possible PortaSwitch® deployment across multiple sites (a different deployment scenario might be fully cloud-based). The “primary” site hosts a standard PortaSwitch® Clustered (the Configuration server, main and replica
       database servers, a cluster of PortaBilling® OCS and web servers and the PortaSIP® cluster).</p>
     <p> </p>
-    <img alt="PortaSwitch® deployment across multiple sites" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image11_DeployingPortaSwitch.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image11_DeployingPortaSwitch.png" class="popup-image-thumbnail" width="750"/>
+    <img alt="PortaSwitch® deployment across multiple sites" src="../assets/images/portaswitch_concepts_mr89-01-ad_files/image11_deployingportaswitch.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image11_DeployingPortaSwitch.png" class="popup-image-thumbnail" width="750"/>
     <p> </p>
     <p>Within its “normal” mode of operation at the remote site:</p>
     <ul class="List47" data-start="1" xmlns="">
@@ -94,7 +94,7 @@
     </ul>
     <p>Another option is deploying secondary site (or sites) in a different city or country using WAN connectivity.</p>
     <p> </p>
-    <p><img alt="Geo-redundancy" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image11.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image11.png" class="popup-image-thumbnail" width="750"/></p>
+    <p><img alt="Geo-redundancy" src="../assets/images/portaswitch_concepts_mr89-01-ad_files/image11.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image11.png" class="popup-image-thumbnail" width="750"/></p>
     <p> </p>
     <p>Whatever the choice, there is an essential requirement to provide proper interconnection between the sites. There are a lot of ways to organize the sites into a single corporate network; the selection of the technology depends on existing network
       infrastructure, equipment or capabilities of your network provider.</p>
@@ -312,7 +312,7 @@
   </div>
   <div class="RH-LAYOUT-FOOTER-container" id="rh-footer">
   <div class="rh-layout-footer-outer-box" style="background-color: #EFEFEF;">
-    <div class="rh-layout-footer-inner-left-box" style="background-color: #EFEFEF;"><img class="rh-layout-footer-imgTag" src="../template/Portorange/Group 114.svg" title="image"/>
+    <div class="rh-layout-footer-inner-left-box" style="background-color: #EFEFEF;"><img class="rh-layout-footer-imgTag" src="../template/portorange/group 114.svg" title="image"/>
       <div>
         <p style="text-align: center;background-color: #EFEFEF;color: rgb(0,0,0,);line-height: 2;margin: 0;"><span style="color:#ffffff;"></span><span style="color:rgb(0,0,0,);">EN</span></p>
       </div>
