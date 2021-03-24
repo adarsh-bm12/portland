@@ -53,7 +53,6 @@
       to register John’s phone.</p>
     <h5><em><a id="Source_system_–_outgoing_calls"></a>Source system – outgoing calls</em></h5>
     <p>Let’s say John calls his friend Harry in the UK.</p>
-    <p> </p>
     <p><img alt="CalldeliveryinDualVersionPortaSwitch-Image-01" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image1.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image1.png" class="popup-image-thumbnail" width="750"/></p>
     <p> </p>
     <ol class="List0" data-start="1" xmlns="">
@@ -81,9 +80,7 @@
     </ol>
     <h5><em><a id="Source_system_–_incoming_calls"></a>Source system – incoming calls</em></h5>
     <p>Consider this example when John receives a call from abroad.</p>
-    <p> </p>
     <p><img alt="CalldeliveryinDualVersionPortaSwitch-Image-02" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image2.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image2.png" class="popup-image-thumbnail" width="750"/></p>
-    <p> </p>
     <ol>
       <li>
         <p class="ListParagraph">The vendor receives the call from the PSTN network and sends it to the dispatching SBC (<strong><span style="color:#ff0000;">1</span></strong>).</p>
@@ -116,7 +113,6 @@
     <h5><em><a id="Target_system_–_outgoing_calls"></a>Target system – outgoing calls</em></h5>
     <p>The administrator has transferred John’s record to the target system.</p>
     <p>So now when John makes another call to his friend Harry in the UK, the following occurs:</p>
-    <p> </p>
     <p><img alt="CalldeliveryinDualVersionPortaSwitch-Image-03" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image3.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image3.png" class="popup-image-thumbnail" width="750"/></p>
     <p> </p>
     <ol>
@@ -144,7 +140,6 @@
     </ol>
     <h5><em><a id="Target_system_–_incoming_calls"></a>Target system – incoming calls</em></h5>
     <p>When Jane dials John’s number, the following occurs:</p>
-    <p> </p>
     <p><img alt="CalldeliveryinDualVersionPortaSwitch-Image-04" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image4.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image4.png" class="popup-image-thumbnail" width="750"/></p>
     <p> </p>
     <ol>
@@ -181,9 +176,7 @@
       hops in the call path and imposes additional charges.</p>
     <p>To optimize call delivery and eliminate excessive charges, Dual Version PortaSwitch® has the inter-system routing mechanism as the direct path for calls throughout the whole network.</p>
     <p>Calls between systems are delivered using special rate codes. These codes represent the billing environments of either system and are derived from their unique IDs. This distinguishes this routing system from intra-system routing.</p>
-    <p> </p>
     <p><img alt="CalldeliveryinDualVersionPortaSwitch-Image-05" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image5.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image5.png" class="popup-image-thumbnail" width="750"/></p>
-    <p> </p>
     <p>Thus, if Jane, from source system A, calls Mary, who is already in the target system B, the following occurs:</p>
     <ul class="List1" data-start="1" xmlns="">
       <li>
@@ -214,9 +207,7 @@
       and receives the correct routing to deliver the call to the recipient. The target system is the fallback system by default.</p>
     <p>You can configure a fallback system for the dispatching SBC to send calls. For example, if you have just deployed Dual Version PortaSwitch® and haven’t yet migrated customers to the target system, define the source system as the fallback one. Select
       a billing environment from the source system in the <strong>ForwardingRegistry.fallback_env </strong>option on the Configuration server.</p>
-    <p> </p>
-    <p><img alt="Fallback system config" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image6.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image6.png" class="popup-image-thumbnail" width="1000"/></p>
-    <p> </p>
+    <p><img alt="Fallback system config" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image6.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image6.png" class="popup-image-thumbnail" width="750"/></p>
     <p>Then when the dispatching SBC cannot identify where to dispatch an incoming request, it routes this request to the source system for further processing.</p>
     <p>Fallback call delivery increases the call success rate in Dual Version PortaSwitch® and therefore improves customer experience.</p>
   </div>

@@ -53,9 +53,7 @@
   <p>WebDispatcher is one of the components of the DSBC and operates on the same servers where the DSBC is deployed. Like other DSBC components, WebDispatcher is clustered, runs on several servers and is accessible via a single public IP address.</p>
   <p><a id="_Hlk522709900"></a>That is how WebDispatcher works. The application sends an API request to get customer information. WebDispatcher finds which system a customer is located in and sends a request there. After WebDispatcher receives the results,
     it returns that customer information to the application.</p>
-  <p> </p>
   <p><img alt="WebDispatcher as DSBC component" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image39.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image39.png" class="popup-image-thumbnail" width="750"/></p>
-  <p> </p>
   <p>Thus, an application can receive data from the source, the target or even both systems. The decision about which data to retrieve is based on the following:</p>
   <ul>
     <li>
