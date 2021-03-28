@@ -1,12 +1,14 @@
 .RH-LAYOUT-CENTERPANEL-topic-box p.tips {
   background-image: url(https://adarshbm82.github.io/portland/assets/images/PortaSwitch_Concepts_MR89-01-AD_files/tips.png);
-  background-position: 4px 1.15px;
+  background-position: 0px 4px 1.15px;
   background-repeat: no-repeat;
   overflow: hidden;
   padding: 5px 52px;
   line-height: 1.15;
   font-family: Roboto;
   font-size: 11pt;
+  margin-left: 0;
+  margin-right: 0;
 }
 .RH-LAYOUT-CENTERPANEL-topic-box td.description {
   vertical-align: top;
