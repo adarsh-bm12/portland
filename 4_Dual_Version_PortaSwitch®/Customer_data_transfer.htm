@@ -45,7 +45,7 @@
   <div>
     <h2 class="Heading2"><a id="Customer_data_transfer"></a>Customer data transfer</h2>
     <p>Using Porter functionality, you can transfer some of your existing customers to the target system and immediately run services there with minimum reconfiguration efforts.</p>
-    <p><img alt="Dual-version PortaSwitch" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image29.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image29.png" class="popup-image-thumbnail" width="750"/></p>
+    <p><img alt="Dual Version PortaSwitch" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image29.png" data-rhwidget="Basic" data-popupimage="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image29.png" class="popup-image-thumbnail" width="750"/></p>
     <p>Porter is a script with which you export a customer’s service and billing configurations and all of the dependent entities (accounts, products, service features, xDRs, invoices, etc.) from a previous “source” system and import them into the target.</p>
     <p class="redNote"><strong>NOTE</strong>: You must have the Root access level to perform the data transfer.</p>
     <p>As a result, the following data is transferred:</p>
@@ -157,9 +157,17 @@
         </tbody>
       </table>
     </div>
-    <p> </p>
     <p>By default, customer xDRs that pertain to the current billing period are transferred. However, you can reconfigure Porter to transfer all of a customer’s xDRs, if necessary.</p>
-    <p><strong>TIP</strong>: To enable customers to use the services in the target system sooner, you can perform two-phase data transfer: first transfer customers without their xDRs. Then, transfer these customers’ xDRs with the second run of Porter.</p>
+    <table border="0" cellpadding="0" cellspacing="0" padding-top="10px">
+      <tbody>
+        <tr>
+          <td class="description"><img alt="Tip" height="24" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/tips-icon.png" style="padding-right: 15px;" width="49"/></td>
+          <td class="description">
+            <p style="margin:0px;padding-left=12px;"><strong>TIP</strong>: To enable customers to use the services in the target system sooner, you can perform two-phase data transfer: first transfer customers without their xDRs. Then, transfer these  customers’ xDRs with the second run of Porter.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <p><strong>Reseller </strong>data is similarly transferred: the reseller configuration and that of their customers and subresellers is transferred.</p>
     <p>To preserve bilateral traffic exchange for <strong>vendors</strong>, pre-configure them as customers on the target system.</p>
     <p>For the administrator’s convenience, the following <strong>general </strong><strong>configuration </strong>data can be separately transferred (either assigned or not to a customer or an account):</p>
@@ -256,18 +264,16 @@
         <p class="ListParagraph">Voice applications.</p>
       </li>
     </ul>
-    <p> </p>
-    <p><img alt="Attention" height="26.2" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/image31.png" style="float: left; padding-right: 15px;" width="29.1"/>Any custom configuration that is defined in the source system (e.g. custom notification
-      templates) must be pre-configured in the target system as well.</p>
-    <h5><a id="Call_records_synchronization"></a><em>Call records synchronization</em></h5>
+    <p><img alt="Attention" height="26.2" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/exclamation_mark.png" style="float: left; padding-right: 15px;" width="29.1"/>Any custom configuration that is defined in the source system (e.g. custom
+      notification templates) must be pre-configured in the target system as well.</p>
+    <h5><a id="Call_records_synchronization"></a>Call records synchronization</h5>
     <p>Dual Version PortaSwitch® provides a mechanism for automatic synchronization of call records between source and target systems. As a result, you can access and download the call records in the Dual Version PortaSwitch® system regardless of the system
       (source or target) on which they were initially created.</p>
     <p>Dual Version PortaSwitch® maintains the service integrity for your customers through constant synchronization of their call records with the help of a script that runs on the target system on set intervals of time.</p>
     <p>When a new call record appears in the source system, the file is synchronized with the target system with the help of the script, even if the corresponding customer wasn’t migrated to the target system yet. When the customer finally fully migrates
       to the target system, all call records will already be present there.</p>
-    <h5><a id="Parallel_processing_mode"></a><em>Parallel processing mode</em></h5>
+    <h5><a id="Parallel_processing_mode"></a>Parallel processing mode</h5>
     <p>Porter can migrate several customers in parallel, which allows you to increase data migration performance.</p>
-    <p class="ListBullet5"> </p>
     <p>To enable parallel processing for Porter, the number of threads for data migration must be defined in the Porter configuration. This maximum thread number depends on the server’s processing capacity and the load caused by other operations running
       on that same server. Contact PortaOne Support to evaluate the number of threads available for Porter in your installation.</p>
     <h4 class="Heading4"><a id="Reverse_transfer_of_customer_xDRs"></a>Reverse transfer of customer xDRs</h4>

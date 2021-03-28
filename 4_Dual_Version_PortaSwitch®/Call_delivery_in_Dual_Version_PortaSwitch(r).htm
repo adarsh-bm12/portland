@@ -51,10 +51,9 @@
     <h4 class="Heading4"><a id="Usage_scenarios"></a>Usage scenarios</h4>
     <p>Let’s take a closer look at how PortaSwitch® processes calls for John: first, when his record is still provisioned in source system A and then, when it is moved to target system B. To make and receive calls, the dispatching SBC’s IP address is used
       to register John’s phone.</p>
-    <h5><em><a id="Source_system_–_outgoing_calls"></a>Source system – outgoing calls</em></h5>
+    <h5><em><a id="Source_system_–_outgoing_calls"></a></em>Source system – outgoing calls</h5>
     <p>Let’s say John calls his friend Harry in the UK.</p>
-    <p><img alt="CalldeliveryinDualVersionPortaSwitch-Image-01" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image1.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image1.png" class="popup-image-thumbnail" width="750"/></p>
-    <p> </p>
+    <p><img alt="Processing outgoing calls from the source system" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image1.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image1.png" class="popup-image-thumbnail" width="750"/></p>
     <ol class="List0" data-start="1" xmlns="">
       <li>
         <p class="ListParagraph">John’s phone sends an INVITE request to the dispatching SBC (<strong><span style="color:#ff0000;">1</span></strong>).</p>
@@ -78,9 +77,9 @@
         <p class="ListParagraph">When the call finishes, PortaSIP® sends accounting information to PortaBilling® to calculate the charges and produce xDRs.</p>
       </li>
     </ol>
-    <h5><em><a id="Source_system_–_incoming_calls"></a>Source system – incoming calls</em></h5>
+    <h5><em><a id="Source_system_–_incoming_calls"></a></em>Source system – incoming calls</h5>
     <p>Consider this example when John receives a call from abroad.</p>
-    <p><img alt="CalldeliveryinDualVersionPortaSwitch-Image-02" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image2.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image2.png" class="popup-image-thumbnail" width="750"/></p>
+    <p><img alt="Processing incoming calls to the source system" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image2.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image2.png" class="popup-image-thumbnail" width="750"/></p>
     <ol>
       <li>
         <p class="ListParagraph">The vendor receives the call from the PSTN network and sends it to the dispatching SBC (<strong><span style="color:#ff0000;">1</span></strong>).</p>
@@ -110,11 +109,10 @@
         <p class="ListParagraph">When the call ends, PortaSIP® in system A sends accounting information to PortaBilling® to calculate the charges and create an xDR for John.</p>
       </li>
     </ol>
-    <h5><em><a id="Target_system_–_outgoing_calls"></a>Target system – outgoing calls</em></h5>
+    <h5><em><a id="Target_system_–_outgoing_calls"></a></em>Target system – outgoing calls</h5>
     <p>The administrator has transferred John’s record to the target system.</p>
     <p>So now when John makes another call to his friend Harry in the UK, the following occurs:</p>
-    <p><img alt="CalldeliveryinDualVersionPortaSwitch-Image-03" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image3.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image3.png" class="popup-image-thumbnail" width="750"/></p>
-    <p> </p>
+    <p><img alt="Processing outgoing calls from the target system" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image3.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image3.png" class="popup-image-thumbnail" width="750"/></p>
     <ol>
       <li>
         <p class="ListParagraph">The call request from John’s phone arrives to the dispatching SBC (<strong><span style="color:#ff0000;">1</span></strong>).</p>
@@ -138,10 +136,9 @@
         <p class="ListParagraph">When the call ends, PortaSIP® sends accounting information to PortaBilling® to calculate the charges and produce xDRs.</p>
       </li>
     </ol>
-    <h5><em><a id="Target_system_–_incoming_calls"></a>Target system – incoming calls</em></h5>
+    <h5><em><a id="Target_system_–_incoming_calls"></a></em>Target system – incoming calls</h5>
     <p>When Jane dials John’s number, the following occurs:</p>
-    <p><img alt="CalldeliveryinDualVersionPortaSwitch-Image-04" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image4.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image4.png" class="popup-image-thumbnail" width="750"/></p>
-    <p> </p>
+    <p><img alt="Processing incoming calls to the target system" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image4.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image4.png" class="popup-image-thumbnail" width="750"/></p>
     <ol>
       <li>
         <p class="ListParagraph">The vendor receives the call from the PSTN network and sends it to the dispatching SBC (<strong><span style="color:#ff0000;">1</span></strong>).</p>
@@ -176,7 +173,7 @@
       hops in the call path and imposes additional charges.</p>
     <p>To optimize call delivery and eliminate excessive charges, Dual Version PortaSwitch® has the inter-system routing mechanism as the direct path for calls throughout the whole network.</p>
     <p>Calls between systems are delivered using special rate codes. These codes represent the billing environments of either system and are derived from their unique IDs. This distinguishes this routing system from intra-system routing.</p>
-    <p><img alt="CalldeliveryinDualVersionPortaSwitch-Image-05" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image5.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image5.png" class="popup-image-thumbnail" width="750"/></p>
+    <p><img alt="Inter-system calling" src="../assets/images/Call delivery in Dual Version PortaSwitch_files/image5.png" data-rhwidget="Basic" data-popupimage="../assets/images/Call delivery in Dual Version PortaSwitch_files/image5.png" class="popup-image-thumbnail" width="750"/></p>
     <p>Thus, if Jane, from source system A, calls Mary, who is already in the target system B, the following occurs:</p>
     <ul class="List1" data-start="1" xmlns="">
       <li>

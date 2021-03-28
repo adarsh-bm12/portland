@@ -1,6 +1,9 @@
 .RH-LAYOUT-CENTERPANEL-topic-box td.description {
   vertical-align: top;
 }
+.RH-LAYOUT-CENTERPANEL-topic-box p.linebreak {
+  line-height: 505;
+}
 .RH-LAYOUT-CENTERPANEL-topic-box h1 {
   margin-top: 24pt;
   line-height: 1.15;
