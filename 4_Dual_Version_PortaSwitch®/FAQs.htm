@@ -100,8 +100,9 @@
     for this data. Therefore, with the help of Porter, you can check the configuration of the target system before running the migration process.</p>
   <h4 class="Heading4"><a id="Is_there_any_downtime_when_a_customer_is_moved_between_systems"></a>Is there any downtime when a customer is moved between systems?</h4>
   <p>Yes. A customer can experience downtime ranging from several seconds to several minutes (for a customer with more than 100 accounts) while being migrated.</p>
-  <p>The migration of <span class="Emphasis">customer data</span> related to the current configuration creates some downtime, but the migration of customer’s history of service usage (xDRs, volume discount counter history, call recordings, etc.) causes no
-    downtime.<span lang="uk-UA"> </span>During the customer data migration, services (LTE, SIP, xDR mediation, etc.) are affected by the downtime as the customer data might already be deleted from the source system, but not yet created on the target system.</p>
+  <p>The migration of <em>customer data</em> related to the current configuration creates some downtime, but the migration of customer’s history of service usage (xDRs, volume discount
+    counter history, call recordings, etc.) causes no downtime.<span lang="uk-UA"> </span>During the customer data migration, services (LTE, SIP, xDR mediation, etc.) are affected by the downtime as the customer data might already be deleted from the
+    source system, but not yet created on the target system.</p>
   <p>Customer migration time strictly depends on the amount of data being migrated – for instance, the number of accounts a customer owns: it takes less time to migrate a residential customer with a basic SIP calling service than an IP Centrex customer with
     dozens of accounts.</p>
   <h4 class="Heading4"><a id="How_many_customers_can_I_batch_migrate_at_a_time"></a>How many customers can I batch migrate at a time?</h4>
@@ -234,9 +235,8 @@
   <p>However, in some cases, IVR numbers are used without a DID number assigned to them. For such IVR numbers, during the migration, the DSBC won’t “know,” to which system to address the calls. To prevent this, such IVR numbers need to be migrated together
     with the product, customers, and accounts that use these IVR numbers.</p>
   <h4 class="Heading4"><a id="What_happens_with_the_xDR_import_process_during_the_customer&#39;s_migration_in_Dual_Version_PortaSwitch"></a>What happens with the xDR import process during the customer&#39;s migration in Dual Version PortaSwitch®?</h4>
-  <p>The same logic as for other
-    <a id="_Hlk50405149"></a>services that take place during the migration process of the customer applies here. Customer migration time is a downtime period for services. The import of xRDs for the customer in migration will fail, but the failed xDRs can be selected and set
-    for reprocessing.</p>
+  <p>The same logic as for other <a id="_Hlk50405149"></a>services that take place during the migration process of the customer applies here. Customer migration time is a downtime period for services. The import of xRDs for the customer in migration will
+    fail, but the failed xDRs can be selected and set for reprocessing.</p>
 
 </div>
           <div class="RH-LAYOUT-BRS-container" id="rh-brs"></div>

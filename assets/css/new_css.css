@@ -1,15 +1,42 @@
-.RH-LAYOUT-CENTERPANEL-topic-box p.tips {
-  background-image: url(https://adarshbm82.github.io/portland/assets/images/PortaSwitch_Concepts_MR89-01-AD_files/tips.png);
-  background-position: 0px 4px 1.15px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  padding: 5px 52px;
-  line-height: 1.15;
-  font-family: Roboto;
-  font-size: 11pt;
-  margin-left: 0;
-  margin-right: 0;
+.RH-LAYOUT-CENTERPANEL-topic-box p.exclamation {
+margin-top: 8pt;
+margin-bottom: 0.001pt;
+line-height: 1.15;
+font-family: Roboto;
+font-size: 11pt;
+position: relative;
+padding-left: 36px;
 }
+
+.RH-LAYOUT-CENTERPANEL-topic-box p.exclamation:before {
+content: '';
+width: 3em;
+height: 3em;
+position: absolute;
+left: 0;
+display: block;
+background: url("exclamation_mark.png") no-repeat;
+}
+.RH-LAYOUT-CENTERPANEL-topic-box p.tips {
+margin-bottom: 0.001pt;
+position: relative;
+padding-left: 36px;
+margin-top: 8pt;
+line-height: 1.15;
+font-family: Roboto;
+font-size: 11pt;
+}
+
+.RH-LAYOUT-CENTERPANEL-topic-box p.tips:before {
+content: '';
+width: 36px;
+height: 36px;
+position: absolute;
+left: 0;
+display: block;
+background: url("tips.png") no-repeat;
+}
+
 .RH-LAYOUT-CENTERPANEL-topic-box td.description {
   vertical-align: top;
 }
@@ -107,7 +134,7 @@
   font-size: 12pt;
   margin-top: 8pt;
   margin-bottom: 0.0001pt;
-  margin-left: 0px;
+  margin-left: 0px !important;
   margin-right: 0px;
 }
 .RH-LAYOUT-CENTERPANEL-topic-box h6 {
