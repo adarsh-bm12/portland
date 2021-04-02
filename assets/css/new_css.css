@@ -10,8 +10,8 @@
 
 .RH-LAYOUT-CENTERPANEL-topic-box p.exclamation:before {
 	content: '';
-	width: 1.5rem;
-	height: 2.5rem;
+	width: 36px;
+	height: 36px;
 	position: absolute;
 	left: 0;
 	display: block;
@@ -129,6 +129,14 @@
 	font-style: normal;
 	font-weight: bold;
 }
+
+.RH-LAYOUT-CENTERPANEL-topic-box h5.Heading5 {
+  font-family: 'Roboto Light';
+ font-style: normal;
+ color: #f6851f;
+ line-height: 1.15;
+}
+
 .RH-LAYOUT-CENTERPANEL-topic-box h5 {
 	font-family: 'Roboto Light';
 	font-style: normal;
