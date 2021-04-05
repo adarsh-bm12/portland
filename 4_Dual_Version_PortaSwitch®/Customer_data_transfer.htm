@@ -3,14 +3,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes"/>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  
   <meta name="version" content="2019.0.8"/>
   <link rel="StyleSheet" href="../template/styles/topic.min.css" type="text/css"/>
-  <link rel="StyleSheet" data-skin="true" type="text/css" href="../template/Portorange/layout.css"/>
+  <link rel="StyleSheet" href="../template/styles/topic.min.css" type="text/css"/> <link rel="StyleSheet" data-skin="true" type="text/css" href="../template/Portorange/layout.css"/>
   <link rel="StyleSheet" data-skin="true" href="../template/Portorange/userstyles.css" type="text/css"/>
-  <title>Customer data transfer</title>
+  
   
 
   <meta charset="UTF-8"/>
@@ -19,8 +19,8 @@
   <link rel="stylesheet" href="../assets/css/new_css.css"/>
   <link rel="stylesheet" href="../assets/css/PortaSwitch_Concepts_MR89-01-AD.css"/>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  
+  
   <meta name="topic-status" content="Draft"/>
 </head>
 
@@ -157,16 +157,8 @@
     </table>
   </div>
   <p>By default, customer xDRs that pertain to the current billing period are transferred. However, you can reconfigure Porter to transfer all of a customer’s xDRs, if necessary.</p>
-  <table>
-    <tbody>
-      <tr>
-        <td class="description" width="36"><img alt="Warning" height="36" margin="0" padding-right="36" src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/tips.png" style="width: 36px; margin: 1px; padding: 1px;" width="36"/></td>
-        <td class="description">
-          <p class="TableParagraph" style="margin:0px"><strong>TIP</strong>: To enable customers to use the services in the target system sooner, you can perform two-phase data transfer: first transfer customers without their xDRs. Then, transfer these  customers’ xDRs with the second run of Porter.</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <p><strong><img src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/tips.png"/> TIP</strong>: To enable customers to use the services in the target system sooner, you can perform two-phase data transfer: first transfer customers without their xDRs.
+    Then, transfer these  customers’ xDRs with the second run of Porter.</p>
   <p style="margin-top: 8pt;margin-right: 0pt;margin-bottom: 0.001pt;margin-left: 0pt"><strong>Reseller </strong>data is similarly transferred: the reseller configuration and that of their customers and subresellers is transferred.</p>
   <p>To preserve bilateral traffic exchange for <strong>vendors</strong>, pre-configure them as customers on the target system.</p>
   <p>For the administrator’s convenience, the following <strong>general </strong><strong>configuration </strong>data can be separately transferred (either assigned or not to a customer or an account):</p>
@@ -263,7 +255,8 @@
       <p class="ListParagraph">Voice applications.</p>
     </li>
   </ul>
-  <p class="exclame"><span>Any custom configuration that is defined in the source system (e.g. custom notification templates) must be pre-configured in the target system as well.</span></p>
+  <p><strong><img src="../assets/images/PortaSwitch_Concepts_MR89-01-AD_files/exclamation_mark.png"/> </strong>Any custom configuration that is defined in the source system (e.g. custom notification templates) must be pre-configured in the target system
+    as well.</p>
   <h5 class="Heading5"><a id="Call_records_synchronization"></a>Call records synchronization</h5>
   <p>Dual Version PortaSwitch® provides a mechanism for automatic synchronization of call records between source and target systems. As a result, you can access and download the call records in the Dual Version PortaSwitch® system regardless of the system
     (source or target) on which they were initially created.</p>

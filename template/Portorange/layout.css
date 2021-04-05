@@ -2477,7 +2477,7 @@ label {
 }
 
 [data-targetname]:not(.show) {
-  display: block;
+  display: unset;
 }
 
 [data-targetname]:not(.show).frameless-hide {

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ppfml version="2.00" project="PortaSwitch ® Architecture and Concepts" type="4">
+  <contextmap>
+    
+  </contextmap>
+  <topiclist defaulttopic="PortaSwitch®_Architecture_and_Concepts\Copyright_notice.htm">
+    
+    <topic>
+      PortaSwitch®_Architecture_and_Concepts\Copyright_notice.htm
+    </topic>
+    
+    <topic>
+      PortaSwitch®_Architecture_and_Concepts\‎Preface.htm
+    </topic>
+    
+    <topic>
+      PortaSwitch®_Architecture_and_Concepts\Hardware_and_software_requirements.htm
+    </topic>
+    
+    <topic>
+      PortaSwitch®_Architecture_and_Concepts\Disk_space_requirements.htm
+    </topic>
+    
+    <topic>
+      PortaSwitch®_Architecture_and_Concepts\Installation.htm
+    </topic>
+    
+    <topic>
+      PortaSwitch®_Architecture_and_Concepts\What_is_new_in_Maintenance_Release_89.htm
+    </topic>
+    
+    <topic>
+      1_System_Architecture\Overview.htm
+    </topic>
+    
+    <topic>
+      1_System_Architecture\Centralized_configuration_management.htm
+    </topic>
+    
+    <topic>
+      1_System_Architecture\Per_configuration_licensing_flexibility_and_control.htm
+    </topic>
+    
+    <topic>
+      1_System_Architecture\Deploying_PortaSwitch(r)_across_multiple_sites.htm
+    </topic>
+    
+    <topic>
+      1_System_Architecture\PortaSwitch(r)_application_components.htm
+    </topic>
+    
+    <topic>
+      1_System_Architecture\PortaOne_monitoring_system.htm
+    </topic>
+    
+    <topic>
+      1_System_Architecture\Updating_the_system_to_a_new_version.htm
+    </topic>
+    
+    <topic>
+      1_System_Architecture\Zero_downtime_update.htm
+    </topic>
+    
+    <topic>
+      1_System_Architecture\Custom_modification_management.htm
+    </topic>
+    
+    <topic>
+      1_System_Architecture\PortaSwitch(r)_deployment_in_a_cloud.htm
+    </topic>
+    
+    <topic>
+      2_Integration_with_third-party_systems\Overview.htm
+    </topic>
+    
+    <topic>
+      2_Integration_with_third-party_systems\API_for_data_operations.htm
+    </topic>
+    
+    <topic>
+      2_Integration_with_third-party_systems\API_for_computer_telephony_integration_services.htm
+    </topic>
+    
+    <topic>
+      2_Integration_with_third-party_systems\Provisioning_data_to_external_systems_new.htm
+    </topic>
+    
+    <topic>
+      2_Integration_with_third-party_systems\Data_consolidation_plug_ins.htm
+    </topic>
+    
+    <topic>
+      3_PortaOne_iPaaS\PortaOne_iPaaS.htm
+    </topic>
+    
+    <topic>
+      4_Dual_Version_PortaSwitch®\Concept_of_Dual_Version_PortaSwitch®.htm
+    </topic>
+    
+    <topic>
+      4_Dual_Version_PortaSwitch®\Customer_data_transfer.htm
+    </topic>
+    
+    <topic>
+      4_Dual_Version_PortaSwitch®\Call_delivery_in_Dual_Version_PortaSwitch(r).htm
+    </topic>
+    
+    <topic>
+      4_Dual_Version_PortaSwitch®\Proxying_Diameter_requests.htm
+    </topic>
+    
+    <topic>
+      4_Dual_Version_PortaSwitch®\RADIUS_Proxy.htm
+    </topic>
+    
+    <topic>
+      4_Dual_Version_PortaSwitch®\Number_porting_requests_processing.htm
+    </topic>
+    
+    <topic>
+      4_Dual_Version_PortaSwitch®\Online_web_signup.htm
+    </topic>
+    
+    <topic>
+      4_Dual_Version_PortaSwitch®\Common_API_entry_point_for_Dual_Version_PortaSwitch(r).htm
+    </topic>
+    
+    <topic>
+      4_Dual_Version_PortaSwitch®\FAQs.htm
+    </topic>
+    
+  </topiclist>
+  <filenamemap>
+    <filenameentry moniker="wh_languagetype">
+      <filename>
+        en_US
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="wh_stoplist">
+      <filename>
+        whxdata/stopwords.xml
+      </filename>
+    </filenameentry>
+    <filenameentry moniker="startpage">
+      <filename>
+        index.htm
+      </filename>
+    </filenameentry>
+        
+  </filenamemap>
+</ppfml>
