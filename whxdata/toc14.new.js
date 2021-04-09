@@ -1,1 +1,0 @@
-(function() {    var toc =  [{"name":"Updating the application data","type":"item","tilePath":"","url":"1_System_Architecture/Updating_the_system_to_a_new_version.htm#Updating_the_application_data"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();
